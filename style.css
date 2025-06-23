@@ -1,0 +1,228 @@
+body {
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+ padding: 20px;
+ display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items from the top */
+    align-items: center;
+    min-height: 100vh;
+ text-align: center; /* Default alignment for body content */
+ background-color: #f2f2f7; /* iOS 13 background color */
+ padding-top: 40px; /* Add some space at the top */
+}
+
+.container {
+ max-width: 500px; /* Adjusted max width for better form presentation */
+ background-color: #ffffff;
+ width: 100%; /* Make container full width for consistent padding */
+ padding: 30px 20px; /* Consistent padding */
+ border-radius: 14px; /* iOS 13 rounded corners */
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#app-logo {
+ display: block;
+ margin: 0 auto 30px auto;
+ width: 100px; /* Slightly smaller logo */
+ height: 100px;
+ border-radius: 50%;
+ border: 3px solid #ffffff; /* Subtle border */
+ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1, h2 {
+    color: #1c1c1e; /* Dark text color */
+ margin-bottom: 15px; /* Reduced margin */
+    font-weight: 600; /* Slightly bolder for prominence */
+ font-size: 2.2em; /* Slightly larger heading */
+ letter-spacing: -0.4px; /* Slightly adjusted spacing */
+}
+
+p {
+ color: #3a3a3c;
+ font-size: 1.05em; /* Slightly larger font size */
+ line-height: 1.5; /* Increased line height for readability */
+ margin-bottom: 30px;
+}
+
+#signup-form {
+ display: flex; /* Use flexbox for alignment */ /* Keep flexbox for form elements */
+ flex-direction: column;
+ gap: 15px;
+ margin-top: 30px;
+ padding: 25px 20px; /* More padding */
+ background-color: #ffffff; /* Consistent white background */
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow for the form */
+}
+
+#signup-form input[type="email"],
+#signup-form button {
+ padding: 12px 15px;
+    border: 1px solid #d1d1d6; /* Light grey border */
+    border-radius: 10px; /* iOS 13 style rounded corners */
+ box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06); /* Softer inset shadow */
+ font-size: 1em; /* Standard font size */
+    box-sizing: border-box; /* Include padding and border in width */
+    -webkit-appearance: none;
+    appearance: none;
+ width: 100%;
+}
+
+#signup-form button {
+    background-color: #007aff; /* iOS blue */
+    color: white;
+ border: none;
+ border-radius: 8px; /* Consistent rounded corners */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+ transition: background-color 0.2s ease-in-out; /* Smooth transition */
+    appearance: none;
+    padding: 14px 15px; /* Slightly more vertical padding */
+} /* iOS 13 button style */
+
+#signup-form button:active {
+ background-color: #006ee6; /* Slightly darker blue on active */
+}
+
+.footer {
+    margin-top: 40px; /* Adjusted margin */
+    padding-top: 25px; /* Adjusted padding */
+ border-top: 1px solid #e5e5ea; /* iOS 13 separator line */
+    font-size: 0.9em;
+    color: #636366; /* A bit darker grey for better readability */
+ text-align: center; /* Center footer content */
+ width: 100%;
+ max-width: 500px; /* Match container width */
+}
+
+.footer a {
+    color: #007aff; /* iOS blue */
+    text-decoration: none;
+ margin: 0 15px; /* More spacing between links */
+}
+
+.footer a:hover {
+ text-decoration: underline; /* Underline on hover for clarity */
+}
+
+.footer .address {
+    margin-top: 10px; /* Reduced margin */
+ font-style: normal; /* Ensure normal font style */
+ line-height: 1.4; /* Standard line height */
+}
+
+/* Content Page Styles (Privacy and Terms) */
+.content-container {
+ max-width: 700px; /* Wider container for policy content */
+ background-color: #ffffff;
+ width: 100%;
+ padding: 30px 20px;
+ border-radius: 14px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ margin-top: 20px; /* Space below the header/logo */
+}
+
+.content-container h1 {
+ text-align: center; /* Center the main heading */
+}
+
+.content-container h2, .content-container h3 {
+ text-align: left; /* Align text left for better readability of policy */
+ margin-top: 25px;
+ margin-bottom: 10px;
+ color: #1c1c1e;
+ font-weight: 600;
+}
+
+.content-container p, .content-container li {
+}
+
+/* Terms and Conditions Page Specific Styles */
+.terms-content {
+    text-align: left;
+    margin-top: 20px;
+    color: #3a3a3c;
+}
+.terms-content h2, .terms-content h3 {
+    /* Apply similar heading styles as privacy policy */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px; /* Reduced padding on smaller screens */
+    }
+    body {
+        padding: 15px;
+    }
+    .container {
+        width: 95%;
+    }
+    .footer a { margin: 5px 10px; display: block; } /* Stack footer links vertically */
+    .privacy-content {
+        padding: 0 10px; /* Add some padding on smaller screens */
+ }
+ .terms-content { padding: 0 10px; } /* Add padding to terms content too */
+}
+
+/* Old Modal Styles (Reimplemented) */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Cover the whole screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black backdrop */
+    backdrop-filter: blur(5px); /* Blur the background */
+    z-index: 1000; /* Ensure it's on top */
+ justify-content: center;
+ align-items: center;
+}
+
+.modal-content-area {
+    background-color: #ffffff;
+    border-radius: 12px; /* Match main container border-radius */
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    max-width: 90%;
+    width: 500px; /* Max width for modal content */
+    max-height: 80vh; /* Limit height */
+    overflow-y: auto; /* Enable scrolling for content */
+ z-index: 1001; /* Ensure content is above overlay */
+}
+
+.modal-content-area h2 {
+    color: #1c1c1e;
+    margin-top: 0;
+    margin-bottom: 20px;
+ font-weight: 600; /* Match other headings */
+ font-size: 1.8em; /* Match other headings */
+ color: #3a3a3c;
+ line-height: 1.6;
+ font-size: 1em;
+}
+
+.modal-content p {
+ margin-bottom: 1em; /* Spacing between paragraphs */
+ text-align: left; /* Align text left within the modal */
+}
+
+.close-button {
+    display: block;
+    margin: 0 auto; /* Center the close button */
+    padding: 10px 20px;
+    background-color: #d1d1d6; /* Light grey button */
+    color: #1c1c1e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+li {
+    list-style-type:none
+}
