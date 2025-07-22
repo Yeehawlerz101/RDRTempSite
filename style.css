@@ -57,8 +57,10 @@ p {
  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow for the form */
 }
 
-#signup-form input[type="email"],
+#signup-form input[type="email"],#signup-form select,#signup-form textarea,
 #signup-form button {
+    margin-top: 10px; /* Consistent margin for all form elements */
+        margin-bottom: 10px; /* Consistent margin for all form elements */
  padding: 12px 15px;
     border: 1px solid #d1d1d6; /* Light grey border */
     border-radius: 10px; /* iOS 13 style rounded corners */

@@ -1,1 +1,1 @@
-temp site until the full one is built
+A simple HTML/JS/CSS starter template
